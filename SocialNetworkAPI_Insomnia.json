@@ -1,0 +1,104 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-10-26T18:30:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2025.10.26",
+  "resources": [
+    {
+      "_id": "wrk_socialnetworkapi",
+      "_type": "workspace",
+      "name": "SocialNetwork API",
+      "scope": "collection"
+    },
+    {
+      "_id": "env_base",
+      "_type": "environment",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:5000"
+      }
+    },
+    {
+      "_id": "req_register",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "User - Register",
+      "method": "POST",
+      "url": "{{ base_url }}/register",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"Username\": \"testuser\",\n  \"Email\": \"testuser@email.com\",\n  \"PasswordHash\": \"123456\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_list_users",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Users - List All",
+      "method": "GET",
+      "url": "{{ base_url }}/users",
+      "headers": []
+    },
+    {
+      "_id": "req_create_post",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Posts - Create",
+      "method": "POST",
+      "url": "{{ base_url }}/posts",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"UserId\": 1,\n  \"Content\": \"Meu primeiro post!\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_list_posts",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Posts - List All",
+      "method": "GET",
+      "url": "{{ base_url }}/posts",
+      "headers": []
+    },
+    {
+      "_id": "req_create_comment",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Comments - Create",
+      "method": "POST",
+      "url": "{{ base_url }}/comments",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"PostId\": 1,\n  \"UserId\": 1,\n  \"Content\": \"Comentário de teste!\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_list_comments",
+      "_type": "request",
+      "parentId": "wrk_socialnetworkapi",
+      "name": "Comments - List All",
+      "method": "GET",
+      "url": "{{ base_url }}/comments",
+      "headers": []
+    }
+  ]
+}

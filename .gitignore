@@ -1,0 +1,30 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+
+# Rider
+.idea/
+
+# ASP.NET
+appsettings*.json
+launchSettings.json
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.config
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
