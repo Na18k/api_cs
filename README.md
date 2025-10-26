@@ -33,7 +33,7 @@ Permite:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "server=localhost;database=SocialNetworkDb;user=root;password=sua_senha;"
+    "DefaultConnection": "server=localhost;database=socialnetwork;user=root;password=sua_senha;"
   }
 }
 ```
