@@ -193,4 +193,12 @@ app.MapGet("/comments", async (AppDbContext db) =>
     }
 });
 
+// Habilitar CORS
+app.UseCors(policy =>
+    policy.AllowAnyOrigin()
+          .AllowAnyMethod()
+          .AllowAnyHeader()
+);
+
+
 app.Run();
