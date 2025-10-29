@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SocialNetwork Frontend</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script defer src="js/api.js"></script>
+</head>
+<body class="has-background-light">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Social Network API - Frontend</h1>
+            <p class="subtitle">Conectado a <strong>http://localhost:5000</strong></p>
+
+            <div class="box">
+                <h2 class="title is-4">Registrar Usuário</h2>
+                <div class="field">
+                    <label class="label">Usuário</label>
+                    <input id="username" class="input" type="text" placeholder="Nome de usuário">
+                </div>
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <input id="email" class="input" type="email" placeholder="Email">
+                </div>
+                <div class="field">
+                    <label class="label">Senha</label>
+                    <input id="password" class="input" type="password" placeholder="Senha">
+                </div>
+                <button class="button is-primary" onclick="registerUser()">Registrar</button>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Usuários Cadastrados</h2>
+                <button class="button is-link" onclick="listUsers()">Atualizar Lista</button>
+                <ul id="userList" class="mt-3"></ul>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Criar Post</h2>
+                <div class="field">
+                    <label class="label">ID do Usuário</label>
+                    <input id="userIdPost" class="input" type="number" placeholder="Ex: 1">
+                </div>
+                <div class="field">
+                    <label class="label">Conteúdo</label>
+                    <textarea id="contentPost" class="textarea" placeholder="Digite o conteúdo do post"></textarea>
+                </div>
+                <button class="button is-success" onclick="createPost()">Publicar</button>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Posts</h2>
+                <button class="button is-link" onclick="listPosts()">Atualizar Posts</button>
+                <div id="postList" class="mt-3"></div>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Criar Comentário</h2>
+                <div class="field">
+                    <label class="label">ID do Post</label>
+                    <input id="postIdComment" class="input" type="number" placeholder="Ex: 1">
+                </div>
+                <div class="field">
+                    <label class="label">ID do Usuário</label>
+                    <input id="userIdComment" class="input" type="number" placeholder="Ex: 1">
+                </div>
+                <div class="field">
+                    <label class="label">Texto</label>
+                    <textarea id="contentComment" class="textarea" placeholder="Digite o comentário"></textarea>
+                </div>
+                <button class="button is-info" onclick="createComment()">Enviar Comentário</button>
+            </div>
+
+            <div class="box">
+                <h2 class="title is-4">Comentários</h2>
+                <button class="button is-link" onclick="listComments()">Atualizar Comentários</button>
+                <div id="commentList" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
